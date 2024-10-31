@@ -15,13 +15,29 @@ Moramo da napišemo asinhronu funkciju koja spava za dati broj milisekundi, a za
 //     return new Promise(delayresolve => setTimeout(delayresolve, millis));
 // }
 
+// async function sleep(millis) {
+//     return new Promise((delayresolve, reject) => {
+//         if (typeof millis !== 'number' || isNaN(millis)) {
+//             reject(new Error('Invalid argument. Expected a number.'));
+//         } else {
+//             setTimeout(delayresolve, millis);
+//         }
+//     });
+// }
+
+let t = Date.now();
+
 async function sleep(millis) {
-    return new Promise((delayresolve, reject) => {
-        if (typeof millis !== 'number' || isNaN(millis)) {
-            reject(new Error('Invalid argument. Expected a number.'));
-        } else {
-            setTimeout(delayresolve, millis);
-        }
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("done");
+        }, millis);
     });
+
+    let response = await promise;
 }
 
+sleep(100).then(() => console.log(Date.now() - t));
+
+// let t = Date.now();
+// sleep(100).then(() => console.log(Date.now() - t))
