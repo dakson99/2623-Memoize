@@ -11,6 +11,8 @@ Moramo da napišemo asinhronu funkciju koja spava za dati broj milisekundi, a za
  * @return {Promise}
  */
 
-async function sleeps(millis) {
+async function sleep(millis) {
     return new Promise(delayresolve => setTimeout(delayresolve, millis));
 }
+let t = Date.now()
+sleep(100).then(() => console.log(Date.now() - t)) 
