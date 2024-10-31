@@ -1,4 +1,6 @@
-/**
+/** RESENJE ZADATKA:
+ * Da bismo memorisali funkciju, možemo kreirati keš objekat koji čuva rezultate prethodnih poziva funkcije. Kad god se funkcija pozove, proveravamo da li keš već ima rezultat za date ulazne parametre. Ako jeste, vraćamo keširani rezultat. U suprotnom, izračunavamo rezultat i čuvamo ga u keš memoriji za buduću upotrebu.
+ * 
  * @param {Function} fn
  * @return {Function}
  */
@@ -26,3 +28,4 @@ const memoizedSum = memoize(function (a, b) {
 
 console.log(memoizedSum(2, 3));
 console.log(memoizedSum(2, 3));
+
