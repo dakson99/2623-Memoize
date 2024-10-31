@@ -11,8 +11,20 @@ Moramo da napišemo asinhronu funkciju koja spava za dati broj milisekundi, a za
  * @return {Promise}
  */
 
+// async function sleep(millis) {
+//     return new Promise(delayresolve => setTimeout(delayresolve, millis));
+// }
+
 async function sleep(millis) {
-    return new Promise(delayresolve => setTimeout(delayresolve, millis));
+    return new Promise((delayresolve, project) => {
+        if (typeof millis !== 'number' || isNaN(millis)) {
+            reject(new Error('Invalid argument. Expected a number.'));
+        } else {
+            setTimeout(delayresolve, millis);
+        }
+    });
 }
+
 let t = Date.now()
-sleep(100).then(() => console.log(Date.now() - t)) 
+sleep(100).then(() => console.log(Date.now() - t))
+
