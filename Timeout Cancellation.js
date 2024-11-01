@@ -19,3 +19,17 @@ f, before the delay of t milliseconds, the function cancelFn is invoked, it shou
  * @param {number} t
  * @return {Function}
  */
+
+const cancellabel = function (fn, args, t) {
+
+    const cancelFn = function () {
+        clearTimeout(timer);
+    }
+
+    const timer = setTimeout(() => {
+        fn(...args)
+    }, t);
+
+    return cancelFn;
+}
+
