@@ -25,6 +25,12 @@ var cancellable = function (fn, args, t) {
     return cancelFn;
 };
 
+let sayHello = (name) => console.log(`Hello, ${name}!`);
+
+let cancel = cancellable(sayHello, ["Alice"], 2000);
+
+setTimeout(cancel, 5000);
+
 // const result = [];
 
 // const fn = (x) => x * 2;
