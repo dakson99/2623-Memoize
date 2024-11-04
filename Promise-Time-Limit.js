@@ -14,7 +14,7 @@ If the execution of the fn exceeds the time limit, the time limited function sho
  * @param {number} t
  * @return {Function}
  */
-
+/*
 var timeLimit = function (fn, t) {
     return async function (...args) {
         return new Promise((delayresolve, reject) => {
@@ -38,3 +38,18 @@ var timeLimit = function (fn, t) {
 
 const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);
 limited(150).catch(console.log)
+*/
+
+var timelimit2 = function (fn, t) {
+    return async function (...args) {
+        const originalFnPromise = fn(...args);
+
+        const timeoutPromise = new Promise((_, reject) => {
+            setTimeout(() => {
+                reject("Time Limit Exceeded");
+            }, t);
+        });
+
+        return Promise.race([originalFnPromise, timeoutPromise]);
+    }
+}
