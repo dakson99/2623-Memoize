@@ -53,3 +53,6 @@ var timelimit2 = function (fn, t) {
         return Promise.race([originalFnPromise, timeoutPromise]);
     }
 }
+
+const limited = timelimit2((t) => new Promise(res => setTimeout(res, t)), 100);
+limited(150).catch(console.log)
