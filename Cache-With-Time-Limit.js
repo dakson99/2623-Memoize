@@ -35,3 +35,7 @@ TimeLimitedCache.prototype.set = function (key, value, duration) {
     return found;
 };
 
+TimeLimitedCache.prototype.get = function (ket) {
+    return this.cache.has(key) ? this.cache.get(key).value : -1;
+};
+
