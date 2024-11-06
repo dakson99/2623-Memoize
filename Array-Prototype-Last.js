@@ -8,3 +8,18 @@ Write code that enhances all arrays such that you can call the array.last() meth
 
 You may assume the array is the output of JSON.parse.
 */
+
+/**
+ * @return {null|boolean|number|string|Array|Object}
+ */
+Array.prototype.last = function () {
+    if (this.length > 0) {
+        return this[this.length - 1];
+    } else {
+        return -1;
+    }
+};
+
+
+const arr = [1, 2, 3];
+arr.last(); // 3
