@@ -37,3 +37,14 @@ Array.prototype.groupBy = function (fn) {
         return grouped;
     }, {});
 }
+
+const people = [
+    { name: "Ana", age: 20 },
+    { name: "Milan", age: 30 },
+    { name: "Marko", age: 20 },
+    { name: "Jelena", age: 30 }
+];
+
+const groupedByAge = people.groupBy(person => person.age);
+
+console.log(groupedByAge);
