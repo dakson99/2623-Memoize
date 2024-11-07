@@ -19,4 +19,21 @@ The provided callback fn will accept an item in the array and return a string ke
 The order of each value list should be the order the items appear in the array. Any order of keys is acceptable.
 
 Please solve it without lodash's _.groupBy function.
-*/ 
+*/
+
+/**
+ * @param {Function} fn
+ * @return {Array}
+ */
+
+Array.prototype.groupBy = function (fn) {
+    return this.reduce((grouped, item) => {
+        const key = fn(item);
+        if (!grouped[key]) {
+            grouped[key] = [];
+        }
+
+        grouped[key].push(item);
+        return grouped;
+    }, {});
+}
