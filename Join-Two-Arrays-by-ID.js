@@ -21,4 +21,49 @@ If two objects share an id, their properties should be merged into a single obje
 
 If a key only exists in one object, that single key-value pair should be included in the object.
 If a key is included in both objects, the value in the object from arr2 should override the value from arr1.
-*/ 
+*/
+
+/**
+ * @param {Array} arr1
+ * @param {Array} arr2
+ * @return {Array}
+ */
+
+var join = function (arr1, arr2) {
+    const result = {};
+    for (let i = 0; i < arr1.length; i++) {
+        result[arr1[i].id] = arr1[i];
+    }
+    for (let i = 0; i < arr2.length; i++) {
+        if (result[arr2[i].id]) {
+            for (const key in arr2[i])
+                result[arr2[i].id][key] = arr2[i][key];
+        } else {
+            result[arr2[i].id] = arr2[i];
+        }
+    }
+
+    return Object.values(result);
+}
+
+let arr1 = [
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+    { id: 3, name: "Charlie" }
+];
+
+let arr2 = [
+    { id: 2, age: 30 },
+    { id: 3, name: "Chuck", age: 25 },
+    { id: 4, name: "David", age: 40 }
+];
+console.log(join(arr1, arr2));
+
+/*RESULT:
+[
+    { id: 1, name: "Alice" },                 // Preuzet iz arr1
+    { id: 2, name: "Bob", age: 30 },          // Spojeno iz arr1 i arr2
+    { id: 3, name: "Chuck", age: 25 },        // Spojeno iz arr1 i arr2 (name promenjen u "Chuck")
+    { id: 4, name: "David", age: 40 }         // Preuzet iz arr2 (novi objekat)
+]
+*/
