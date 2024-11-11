@@ -8,6 +8,7 @@ Pravimo funkciju koja ce u osnovi vratiti ako je osoba milenium
 Posotje dva resenja za ovaj problem:
 Prva solucija jeste koriscenjem dodatne promenljive koju nazivamo self koja ide van funkcije, jer ovako smo van isMillenial funckije. Ovo je bilo resenje pre ES6 
 Druga solucija jeste koriscenjem arrow funkcije, ovo funkcionise jer arrow funkcija koristi this keyword iz svog roditeljskog opsega. Arrow funckija nasledjuje this kljucnu rec iz roditeljskog opsega.
+Argument keyword je dostupan samo u regularnim funkcijama. Arguments nije toliko vazan u modernom JavaScriptu 
 
 */
 // var firstName = 'Matilda';
@@ -43,3 +44,15 @@ const Darko = {
 Darko.greet();
 Darko.calcAge();
 
+const addExpr = function (a, b) {
+    console.log(arguments);
+    return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+
+var addArrow = (a, b) => {
+    console.log(arguments);
+    return a + b;
+};
+addArrow(2, 5, 8);
