@@ -7,6 +7,7 @@ dobija svoju this keyword
 Pravimo funkciju koja ce u osnovi vratiti ako je osoba milenium
 Posotje dva resenja za ovaj problem:
 Prva solucija jeste koriscenjem dodatne promenljive koju nazivamo self koja ide van funkcije, jer ovako smo van isMillenial funckije. Ovo je bilo resenje pre ES6 
+Druga solucija jeste koriscenjem arrow funkcije, ovo funkcionise jer arrow funkcija koristi this keyword iz svog roditeljskog opsega. Arrow funckija nasledjuje this kljucnu rec iz roditeljskog opsega.
 
 */
 // var firstName = 'Matilda';
@@ -17,13 +18,20 @@ const Darko = {
         // console.log(this);
         console.log(2037 - this.year);
 
-        const self = this;
-        const isMillenial = function () {
-            console.log(self);
-            console.log(self.year >= 1992 && self.year <= 2007);
+        // Solution 1
+        // const self = this;
+        // const isMillenial = function () {
+        //     console.log(self);
+        //     console.log(self.year >= 1992 && self.year <= 2007);
+        // };
+
+        // Solution 2
+        const isMillenial = () => {
+            console.log(this);
+            console.log(this.year >= 1992 && this.year <= 2007);
         };
-        //console.log(this.year >= 1992 && this.year <= 2007); };
         isMillenial();
+
     },
 
     greet: () => {
