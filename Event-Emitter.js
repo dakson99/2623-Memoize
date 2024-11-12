@@ -58,3 +58,13 @@ class EventEmitter {
         return results;
     }
 }
+
+const emitter = new EventEmitter();
+
+const greetSub = emitter.subscribe("greet", (name) => `Hello, ${name}!`);
+
+console.log(emitter.emit("greet", ["Alice"]));
+
+greetSub.unsubscribe();
+
+console.log(emitter.emit("greet", ["Bob"]));
