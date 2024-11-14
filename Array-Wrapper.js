@@ -30,3 +30,11 @@ ArrayWrapper.prototype.valueOf = function () {
     }
     return sum;
 }
+
+/**
+ * @return {string}
+ */
+
+ArrayWrapper.prototype.ToString = function () {
+    return `[${this.nums.join(',')}]`;
+}
