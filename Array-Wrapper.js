@@ -35,6 +35,10 @@ ArrayWrapper.prototype.valueOf = function () {
  * @return {string}
  */
 
-ArrayWrapper.prototype.ToString = function () {
+ArrayWrapper.prototype.toString = function () {
     return `[${this.nums.join(',')}]`;
 }
+
+const arr = new ArrayWrapper([1, 2, 3]);
+console.log(arr.toString());
+console.log(String(arr));
