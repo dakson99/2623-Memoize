@@ -37,3 +37,14 @@ console.log(restaurantName, hours, tags);
 // viticaste zagrade da se postavi prazna vrednost, jer u ovom primeru nemamo nista pod name svojstvom, kad bi u name izbrisali [] dobili bi undefine
 const { menu = [], starterMenu: starter = [] } = restaurant;
 console.log(menu, starter);
+
+//Mutirajuce varijable pri destrukturiranju objekta 
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b } = obj);
+console.log(a, b);
+
+// Ugnezdeni objekat
+const { fri: { open: o, close: c } } = openingHourse;
+console.log(o, c);
