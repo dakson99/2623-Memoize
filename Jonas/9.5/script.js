@@ -45,6 +45,11 @@ const restaurant = {
             `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
         );
     },
+
+    orderPasta: function (ing1, ing2, ing3) {
+        console.log(`Here is your declicious pasta with ${ing1}, ${ing2}, 
+        ${ing3}`);
+    }
 };
 
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
@@ -56,3 +61,30 @@ const mainMenuCopy = [...restaurant.mainMenu];
 // Spajanje 2 niza
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu);
+
+// Iterables: arrays, strings, maps, sets. NOT objects
+const str = 'Jonas';
+const letters = [...str, ' ', 'S.'];
+console.log(letters);
+
+const ingrediants = [
+    //prompt("Let's make pasta! Inrediant 1?"), 
+    //prompt("Ingrediant 2?"), 
+    //prompt("Ingrediant 3?")
+];
+console.log(ingrediants);
+
+// Isto napisano
+restaurant.orderPasta(ingrediants[0], ingrediants[1], ingrediants[2]);
+restaurant.orderPasta(...ingrediants);
+
+//Objekti, kao sto smo imali ovaj primer const newArr = [1, 2, ...arr]; samo da napravimo novi objekat sa restoranima sa original podacima plus dodatni podaci.
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
+
+

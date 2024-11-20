@@ -4,4 +4,6 @@ Spred operator uzima sve elemente iz niza i ne stvara novu varijablu.
 
 Dve upotrebe spred operator su: plitkih kopija nizova i spajanje dva niza.
 
-Sta su iterable: postoje razlicite iterable u javaScriptu to su array, string, map, sets ali ne i objekti. 
+Sta su iterable: postoje razlicite iterable u javaScriptu to su array, string, map, sets ali ne i objekti.
+
+ES 2018 spred operator radi i sa ovjektima 
