@@ -28,6 +28,11 @@ const restaurant = {
             close: 24,
         },
     },
+
+    orderPizza: function (mainIngredient, ...orherIngredient) {
+        console.log(mainIngredient);
+        console.log(orherIngredient);
+    },
 }
 
 // Ispisali smo prvi i treci element u nizu i na kraju obavezno ide rest patter poslje njega ne mozemo nista da dodajemo.
@@ -48,3 +53,5 @@ const add = function (...numbers) {
 add(2, 3);
 add(5, 3, 7, 8);
 add(8, 2, 5, 3, 1, 6, 8);
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
