@@ -43,3 +43,15 @@ const guestes2 = restaurant.numGuests || 10;
 console.log(guestes2);
 
 console.log('---AND---');
+console.log(0 && 'Jonas');
+console.log(7 && 'Jonas');
+
+console.log('Hello' && 23 && null && 'Jonas')
+
+// Practical example
+if (restaurant.orderPizza) {
+    restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+// Ovaj prvi deo koda restaurant.orderPizza je isti kao ovaj gore if uslov.
+restaurant.orderPizza && restaurant.orderPizza('Mashrooms', 'spinach')
