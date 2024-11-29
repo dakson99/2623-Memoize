@@ -14,8 +14,12 @@ const rest2 = {
 // rest2.numGuests = rest2.numGuests || 10;
 
 //Ovo je isto napisano kao primer iznad
-rest1.numGuests ||= 10;
-rest2.numGuests ||= 10;
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// nullish assigment operator (null or undefinde)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
 
 
 console.log(rest1);
