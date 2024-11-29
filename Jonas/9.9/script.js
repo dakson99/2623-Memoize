@@ -1,6 +1,7 @@
 const rest1 = {
     name: 'Capri',
-    numGuests: 20,
+    //numGuests: 20,
+    numGuests: 0,
 };
 
 const rest2 = {
@@ -12,6 +13,7 @@ const rest2 = {
 // rest1.numGuests = rest1.numGuests || 10;
 // rest2.numGuests = rest2.numGuests || 10;
 
+//Ovo je isto napisano kao primer iznad
 rest1.numGuests ||= 10;
 rest2.numGuests ||= 10;
 
