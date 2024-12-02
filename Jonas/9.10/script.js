@@ -86,3 +86,7 @@ const printGoals = function (...players) {
 };
 
 printGoals(...game.scored);
+
+// Resenje 7
+team1 < team2 && console.log('Team 1 is more likely to win');
+
