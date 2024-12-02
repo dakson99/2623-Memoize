@@ -66,3 +66,7 @@ console.log(players2);
 // Resenje 2
 const [gk, ...fieldPlayers] = players1;
 console.log(gk, fieldPlayers);
+
+// Resenje 3
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
