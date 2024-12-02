@@ -70,3 +70,7 @@ console.log(gk, fieldPlayers);
 // Resenje 3
 const allPlayers = [...players1, ...players2];
 console.log(allPlayers);
+
+// Resenje 4
+const plaiers1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(plaiers1Final);
