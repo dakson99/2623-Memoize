@@ -21,9 +21,11 @@ const rest2 = {
 rest1.numGuests ??= 10;
 rest2.numGuests ??= 10;
 
-rest1.owner = rest1.owner && '<ANONYMUS>';
-rest2.owner = rest2.owner && '<ANONYMUS>';
-
+// AND assigment operator
+// rest1.owner = rest1.owner && '<ANONYMUS>';
+// rest2.owner = rest2.owner && '<ANONYMUS>';
+rest1.owner &&= '<ANONYMUS>';
+rest2.owner &&= '<ANONYMUS>';
 
 
 console.log(rest1);
