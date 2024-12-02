@@ -74,3 +74,7 @@ console.log(allPlayers);
 // Resenje 4
 const plaiers1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 console.log(plaiers1Final);
+
+// Resenje 5
+const { odds: { team1, x: draw, team2 } } = game;
+console.log(team1, draw, team2);
