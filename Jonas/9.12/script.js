@@ -1,13 +1,15 @@
+const weekday = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
 const openingHourse = {
-    thu: {
+    [weekday[3]]: {
         open: 12,
         close: 22,
     },
-    fri: {
+    [weekday[4]]: {
         open: 11,
         close: 23,
     },
-    sat: {
+    [weekday[6]]: {
         open: 0,
         close: 24,
     },
