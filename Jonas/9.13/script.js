@@ -50,3 +50,9 @@ for (const day of weekday) {
 // Methods
 console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
 console.log(restaurant.orderPizza?.(0, 1) ?? 'Method does not exist');
+
+// Arrays
+const users = [{ name: 'Darko', email: 'hello@darko.io' }];
+//const users = [];
+
+console.log(users[0]?.name ?? 'User array empty');
