@@ -1,0 +1,1 @@
+Ako zelimo da koristimo ime promenljive propery name treba da koristimo uglaste zagrade.
