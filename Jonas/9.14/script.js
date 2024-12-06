@@ -43,3 +43,8 @@ for (const day of promeries) {
     openStr += `${day}, `;
 }
 console.log(openStr);
+
+// Property VALUES
+const values = Object.values(openingHourse);
+console.log(values);
+
