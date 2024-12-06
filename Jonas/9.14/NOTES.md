@@ -1,0 +1,1 @@
+Entire Object ovde imamo key i value kad ga ispisemo.
