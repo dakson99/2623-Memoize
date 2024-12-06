@@ -67,3 +67,12 @@ const game = {
 
 for (const [i, player] of game.scored.entries())
     console.log(`Goal ${i + 1}: ${player}`);
+
+// 2. Resenje
+const odds = Object.values(game.odds);
+let average = 0;
+for (const odd of odds)
+    average += odd;
+average /= odds.length;
+console.log(average);
+
