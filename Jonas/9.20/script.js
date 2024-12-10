@@ -25,3 +25,7 @@ const gameEvents = new Map([
 // Resenje 1.
 const events = [...new Set(gameEvents.values())];
 console.log(events);
+
+// Resenje 2.
+gameEvents.delete(64);
+console.log(gameEvents);
