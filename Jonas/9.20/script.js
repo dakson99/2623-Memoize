@@ -22,4 +22,6 @@ const gameEvents = new Map([
     [92, '🔶 Yellow card'],
 ]);
 
-//
+// Resenje 1.
+const events = [...new Set(gameEvents.values())];
+console.log(events);
