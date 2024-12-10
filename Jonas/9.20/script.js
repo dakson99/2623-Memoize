@@ -29,3 +29,10 @@ console.log(events);
 // Resenje 2.
 gameEvents.delete(64);
 console.log(gameEvents);
+
+// Resenje 3.
+console.log(`An event happened, on average ${90 / gameEvents.size} minuts`);
+const time = [...gameEvents.keys()].pop();
+console.log(time);
+console.log(
+    `An event happened, on average, every ${time / gameEvents.size} minuts`);
