@@ -1,0 +1,2 @@
+Map su korisnije od sets.
+U JavaScriptu Mapa je struktura podataka koje mozemo koristiti za mapiranje vrednosti u kljuceve. Podaci se čuvaju u parovima a vrednosti ključeva u mapama. Velika razlika izmedju objekata i mape je da u mapama ključevi mogu imati bilo koju vrednost. U objektima su ključevi u osnovi uvek nizovi.
