@@ -36,3 +36,9 @@ const time = [...gameEvents.keys()].pop();
 console.log(time);
 console.log(
     `An event happened, on average, every ${time / gameEvents.size} minuts`);
+
+// Resenje 4.
+for (const [main, event] of gameEvents) {
+    const half = main <= 45 ? 'FIRST' : 'SECOND';
+    console.log(`[${half} HALF] ${main}: ${event}`);
+}
