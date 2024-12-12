@@ -1,0 +1,3 @@
+indexOf() - koristimo da dobijemo poziciju u kojoj se odredjeno slovo nalazi u nizu. Ovo nam daje prvu poziciju, krece od pocetka i trazi. Takodje mozemo da pretrazimo i celu rec, a kad promenimo jedno slovo izbacuje -1. 
+lastIndexOf() - krece da trazi odpozadi.
+Izvlacenje dela niza iz stringa pomocu metode slice(). Dakle ako navedemo broj on je parametar pocetka dakle to je pozicija od koje ekstrakcija krece(subString).
