@@ -15,3 +15,15 @@ const transformer = function (str, fn) {
 }
 
 transformer('JavaScript is the best!', upperFirstWord);
+
+transformer('JavaScript is the best!', oneWord);
+
+/*
+Rezime sta smo ovde uradili: Ovde pozivamo funkciju transform i tu funkciju prosledjujemo funkciji povratnog poziva. Funkcije koje prosledjujemo zovemo Callback functions.
+*/
+
+const high5 = function () {
+    console.log('👌');
+};
+
+document.body.addEventListener('click', high5);
