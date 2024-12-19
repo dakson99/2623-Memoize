@@ -1,0 +1,1 @@
+Zapamtimo da je funkcija objekat a objekat ima metode i stoga funkcije mogu imati metode.
