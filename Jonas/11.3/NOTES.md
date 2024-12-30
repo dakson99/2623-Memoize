@@ -15,3 +15,5 @@ Plitka kopija niza. Glavno pitanje jeste da li plitu kopiju stvoriti pomocu 'sli
 Najvise se koristi 'splice' metod da izbrise poslednji element // 95 line
 
 Metoda 'reverse' mutira originalni niz, i on vraca niz u obrnutom smeru
+
+Metoda 'concat' se koristi da spoji dva niza, i ne mutira nijedan od uljucenih nizova.
