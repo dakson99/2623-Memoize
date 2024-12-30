@@ -4,6 +4,8 @@ Mozemo kreirati i krajnju vrednost //85 line
 
 Mozemo definisati negativni parametar pocetka a zatim ce poceti da kopira sa kraja niza. // 86 line
 
-Mozemo kreirati i poslednji element niza.
+Mozemo kreirati i poslednji element niza. // 87 line
+
+Kao krajnji parametar mozemo koristiti negativni parametar //88 line
 
 
