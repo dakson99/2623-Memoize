@@ -8,4 +8,6 @@ Mozemo kreirati i poslednji element niza. // 87 line
 
 Kao krajnji parametar mozemo koristiti negativni parametar //88 line
 
+Plitka kopija niza. Glavno pitanje jeste da li plitu kopiju stvoriti pomocu 'slice' metode ili spread operatora, pa to je potpuno na nama. Slce treba koristiti kada hocemo da povezemo vise metoda zajedno pa zovu jedan za drugim. //80,90 line
+
 
