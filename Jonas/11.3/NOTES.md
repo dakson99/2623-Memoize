@@ -10,4 +10,5 @@ Kao krajnji parametar mozemo koristiti negativni parametar //88 line
 
 Plitka kopija niza. Glavno pitanje jeste da li plitu kopiju stvoriti pomocu 'slice' metode ili spread operatora, pa to je potpuno na nama. Slce treba koristiti kada hocemo da povezemo vise metoda zajedno pa zovu jedan za drugim. //80,90 line
 
+'Splice' funkcionise potpuno isto kao 'slice'. U sustini razlika je u tome sto menja originalni niz, dakle mutira taj niz. Ekstaktovani elementi nestaju iz niza. // 94,95 line
 
