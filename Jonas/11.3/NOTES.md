@@ -1,0 +1,1 @@
+Sa Metodom 'slice' mozemo izdvojiti deo bilo kog niza ali bez promene originalnog niza. Kao i u nizu ovde imamo pocetni parametar, dakle navodimo broj a to je index po kome cemo poceti da izvlacimo. Kada unesemo broj 2 treba da pocne da izvlaci od 'c' i onda do kraja, i onda ce slice metod vratiti novi niz.
