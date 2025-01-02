@@ -1,0 +1,1 @@
+Kod REDUCE metode prvi element je akumulator, current element, drugi je index a treci je niz. Akumulator je snezna kugla koja stalno akumulira vrednost. U prvom primeru funkcija REDUCE je prvi argument, a ona takodje ima i drugi parametar a to je pocetna vrednost akumulatora. 
