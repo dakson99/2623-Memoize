@@ -100,17 +100,25 @@ const calcDisplayBalance = function (movements) {
     labelBalance.textContent = `${balance}€`;
 }
 
-const calcDisplaySummary = function (movements) {
-    const income = movements.filter(mov => mov > 0).reduce((acc, mov) => acc + mov, 0);
+const calcDisplaySummary = function (acc) {
+    const income = acc.movements
+        .filter(mov => mov > 0)
+        .reduce((acc, mov) => acc + mov, 0);
     labelSumIn.textContent = `${income}€`;
 
-    const out = movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov, 0);
+    const out = acc.movements
+        .filter(mov => mov < 0)
+        .reduce((acc, mov) => acc + mov, 0);
     labelSumOut.textContent = `${Math.abs(out)}€`;
 
-    const interest = movements.filter(mov => mov > 0).map(deposite => (deposite * 1.2) / 100).filter((int, i, arr) => {
-        console.log(arr);
-        return int >= 1;
-    }).reduce((acc, inc) => acc + inc, 0);
+    const interest = acc.movements
+        .filter(mov => mov > 0)
+        .map(deposite => (deposite * acc.interestRate) / 100)
+        .filter((int, i, arr) => {
+            console.log(arr);
+            return int >= 1;
+        })
+        .reduce((acc, inc) => acc + inc, 0);
     labelSumInterest.textContent = `${interest}€`;
 }
 
@@ -151,7 +159,7 @@ btnLogin.addEventListener('click', function (e) {
         //Display balance
         calcDisplayBalance(currentAccount.movements);
         //Display summary
-        calcDisplaySummary(currentAccount.movements);
+        calcDisplaySummary(currentAccount);
 
     }
 });
