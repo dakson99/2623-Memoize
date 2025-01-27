@@ -271,3 +271,19 @@ console.log(arr.flat());
 
 const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 console.log(arrDeep.flat(2));
+
+//Prvi nacin
+/*const accountMOvements = accounts.map(acc => acc.movements);
+console.log(accountMOvements);
+const allMovements = accountMOvements.flat();
+console.log(allMovements);
+const overalBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+console.log(overalBalance);*/
+
+// Drugi nacin
+const overalBalance = accounts.map(acc => acc.movements).flat().reduce((acc, mov) => acc + mov, 0);
+console.log(overalBalance);
+
+// Umesto flat imamo i flatMap ali on ide samo u prvi novo dubine, ako trebamo da idemo dublje moramo koristit flat() metodu a ne flatMap().
+const overalBalance2 = accounts.flatMap(acc => acc.movements).reduce((acc, mov) => acc + mov, 0);
+console.log(overalBalance2);
