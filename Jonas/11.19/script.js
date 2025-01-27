@@ -234,3 +234,9 @@ console.log(max);
 const euroToUsd = 1.1;
 const totalDepositeUSD = movements.filter(mov => mov > 0).map(mov => mov * euroToUsd).reduce((acc, mov) => acc + mov, 0);
 console.log(totalDepositeUSD); // reduce ovde vraca broj, ako prvi vraca niz a ovde vreaca onda ide lancano vracanje znaci poslednji je broj.
+
+console.log(movements);
+console.log(movements.includes(-130));
+
+const anyDeposits = movements.some(mov => mov > 0);
+console.log(anyDeposits);
