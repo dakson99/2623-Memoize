@@ -189,6 +189,19 @@ btnTransfer.addEventListener('click', function (e) {
     }
 });
 
+btnLoan.addEventListener('click', function (e) {
+    const amount = Number(inputLoanAmount.value);
+
+    if (amount > 0 && currentAccount.movements.some(mov => mov => amount * 0.1)) {
+        // Add movement
+        currentAccount.movements.push(amount);
+
+        // Update UI
+        updateUI(currentAccount);
+    }
+    inputLoanAmount.value = '';
+});
+
 btnClose.addEventListener('click', function (e) {
     e.preventDefault();
 
@@ -236,7 +249,19 @@ const totalDepositeUSD = movements.filter(mov => mov > 0).map(mov => mov * euroT
 console.log(totalDepositeUSD); // reduce ovde vraca broj, ako prvi vraca niz a ovde vreaca onda ide lancano vracanje znaci poslednji je broj.
 
 console.log(movements);
+// Ovde se proverava jednakost
 console.log(movements.includes(-130));
 
+// SOME: Ovde se proverava uslov
 const anyDeposits = movements.some(mov => mov > 0);
 console.log(anyDeposits);
+
+// EVERY
+console.log(movements.every(mov => mov > 0));
+console.log(account4.movements.every(mov => mov > 0));
+
+// Separe callback
+const deposit = mov => mov > 0;
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
