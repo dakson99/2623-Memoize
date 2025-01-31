@@ -319,3 +319,21 @@ console.log(x);
 
 arrr.fill(23, 2, 6);
 console.log(arrr);
+
+// Array.from
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
+console.log(z);
+
+labelBalance.addEventListener('click', function () {
+    const movementsUI = Array.from(
+        document.querySelectorAll('.movements__value'),
+        el => Number(el.textContent.replace('e', ''))
+    );
+
+    console.log(movementsUI);
+
+    const movementsUI2 = [...document.querySelectorAll('.movements__value')];
+});
