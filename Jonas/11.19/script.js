@@ -361,3 +361,22 @@ console.log(numDeposits1000);
 // let a = 10;
 // console.log(++a);
 // console.log(a);
+
+// 4.
+const convertTitleCase = function (title) {
+    const capitzalize = str => str[0].toUpperCase() + str.slice(1);
+
+    const exceptions = ['1', 'an', 'and', 'the', 'but', 'or', 'on', 'in', 'with'];
+
+    const titleCase = title
+        .toLowerCase()
+        .split(' ')
+        .map(word => (exceptions.includes(word) ? word : capitzalize(word)))
+        .join(' ');
+
+    return capitzalize(titleCase);
+};
+
+console.log(convertTitleCase('this is a nice title'));
+console.log(convertTitleCase('title is a LONG title but not too long'));
+console.log(convertTitleCase('and here is anothe title with an EXAMPLE'));
