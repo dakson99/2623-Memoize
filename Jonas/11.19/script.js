@@ -362,6 +362,20 @@ console.log(numDeposits1000);
 // console.log(++a);
 // console.log(a);
 
+// 3.
+const { deposits, withdrawals } = accounts
+    .flatMap(acc => acc.movements)
+    .reduce(
+        (sums, cur) => {
+            // cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+            sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
+            return sums;
+        },
+        { deposit: 0, withdrawals: 0 }
+    );
+
+console.log(deposit, withdrawals);
+
 // 4.
 const convertTitleCase = function (title) {
     const capitzalize = str => str[0].toUpperCase() + str.slice(1);
