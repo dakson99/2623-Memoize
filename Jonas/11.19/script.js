@@ -337,3 +337,11 @@ labelBalance.addEventListener('click', function () {
 
     const movementsUI2 = [...document.querySelectorAll('.movements__value')];
 });
+
+// 1.
+const bankDepositeSum = accounts
+    .flatMap(acc => acc.movements)
+    .filter(mov => mov > 0)
+    .reduce((sum, cur) => sum + cur, 0);
+
+console.log(bankDepositeSum);
