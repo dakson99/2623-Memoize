@@ -443,3 +443,7 @@ const ownersTooLittle = dogs
 
 console.log(ownersTooMuch);
 console.log(ownersTooLittle);
+
+// 4.
+console.log(`${ownersTooMuch.join(' and ')}'s dogs are eating too much`);
+console.log(`${ownersTooLittle.join(' and ')}'s dogs are eating to little`);
